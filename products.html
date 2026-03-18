@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Paradize Hair Store</title>
+    <meta name="description" content="Browse our collection of premium human hair, wigs, braided wigs, hair kits, and accessories. Quality guaranteed.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-gem me-2"></i>Paradize<span>Hair</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-auto align-items-start align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house-door me-2"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="bi bi-person me-2"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html"><i class="bi bi-scissors me-2"></i>Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html"><i class="bi bi-bag me-2"></i>Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html"><i class="bi bi-images me-2"></i>Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-2"></i>Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center reveal">
+                    <span class="section-subtitle">Our Collection</span>
+                    <h1 class="section-title">Premium <span class="gradient-text">Products</span></h1>
+                    <p class="section-description">Discover our exquisite range of high-quality hair products, crafted to perfection for the modern woman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="filter-tabs reveal">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="human-hair">Human Hair</button>
+                <button class="filter-btn" data-filter="hair-blend">Hair Blend</button>
+                <button class="filter-btn" data-filter="braided-wigs">Braided Wigs</button>
+                <button class="filter-btn" data-filter="hair-kits">Hair Kits</button>
+                <button class="filter-btn" data-filter="accessories">Accessories</button>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="product-grid">
+                <!-- Product 1 - Human Hair -->
+                <div class="product-item" data-category="human-hair">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Best Seller</span>
+                        <div class="card-image">
+                            <img src="assets/img/product-1.jpg" alt="Silky Straight Bundle">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Silky Straight Bundle', '₦45,000', 'Premium 100% human hair bundle with natural shine and softness. Perfect for sew-ins and wig making.', 'assets/img/product-1.jpg')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Silky Straight Bundle</h5>
+                            <p class="card-text">Premium 100% human hair, soft and tangle-free.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="card-price">₦45,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Silky Straight Bundle')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 - Human Hair -->
+                <div class="product-item" data-category="human-hair">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">New</span>
+                        <div class="card-image">
+                            <img src="assets/img/product-2.jpg" alt="Deep Wave Wig">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Deep Wave Wig', '₦85,000', 'Luxurious deep wave texture wig, pre-plucked with baby hair for a natural hairline. 150% density.', 'assets/img/product-2.jpg')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Deep Wave Wig</h5>
+                            <p class="card-text">Pre-plucked lace front wig with baby hair.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="card-price">₦85,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Deep Wave Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 - Braided Wigs -->
+                <div class="product-item" data-category="braided-wigs">
+                    <div class="card-3d product-card">
+                        <div class="card-image">
+                            <img src="assets/img/product-3.jpg" alt="Goddess Braids Wig">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Goddess Braids Wig', '₦120,000', 'Hand-braided goddess braids wig with intricate patterns. Lightweight and comfortable for everyday wear.', 'assets/img/product-3.jpg')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Goddess Braids Wig</h5>
+                            <p class="card-text">Handcrafted braided wig with intricate patterns.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="card-price">₦120,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Goddess Braids Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 - Hair Blend -->
+                <div class="product-item" data-category="hair-blend">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Popular</span>
+                        <div class="card-image">
+                            <img src="assets/img/product-4.jpg" alt="Body Wave Blend">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Body Wave Blend', '₦55,000', 'Beautiful body wave texture with human hair blend. Natural brown color with subtle highlights.', 'assets/img/product-4.jpg')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Body Wave Blend</h5>
+                            <p class="card-text">Human hair blend with beautiful body wave.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="card-price">₦55,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Body Wave Blend')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Value Pack</span>
+                        <div class="card-image">
+                            <img src="assets/img/product-5.jpg" alt="Premium Hair Care Kit">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Premium Hair Care Kit', '₦35,000', 'Complete hair care kit including hair oil, edge control, wig cap, comb, and hair accessories.', 'assets/img/product-5.jpg')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Hair Care Kit</h5>
+                            <p class="card-text">Complete care kit for your wigs and extensions.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="card-price">₦35,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Premium Hair Care Kit')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 - Human Hair -->
+                <div class="product-item" data-category="human-hair">
+                    <div class="card-3d product-card">
+                        <div class="card-image">
+                            <img src="assets/img/product-6.jpg" alt="Water Wave Wig">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Water Wave Wig', '₦95,000', 'Stunning water wave pattern with 180% density. Full and voluminous look with natural movement.', 'assets/img/product-6.jpg')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Water Wave Wig</h5>
+                            <p class="card-text">Beautiful water wave texture, 180% density.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="card-price">₦95,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Water Wave Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 - Human Hair -->
+                <div class="product-item" data-category="human-hair">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Classic</span>
+                        <div class="card-image">
+                            <img src="assets/img/product-7.jpg" alt="Bob Wig">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Classic Bob Wig', '₦65,000', 'Sleek and stylish bob cut wig. Perfect for professional settings and everyday elegance.', 'assets/img/product-7.jpg')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Classic Bob Wig</h5>
+                            <p class="card-text">Sleek bob cut for elegant everyday style.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="card-price">₦65,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Classic Bob Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 - Human Hair -->
+                <div class="product-item" data-category="human-hair">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Natural</span>
+                        <div class="card-image">
+                            <img src="assets/img/product-8.jpg" alt="Kinky Curly Wig">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Kinky Curly Wig', '₦75,000', 'Embrace your natural texture with this beautiful kinky curly wig. Full, bouncy curls that look and feel natural.', 'assets/img/product-8.jpg')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kinky Curly Wig</h5>
+                            <p class="card-text">Natural afro texture, full and bouncy curls.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="card-price">₦75,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Kinky Curly Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 - Hair Blend -->
+                <div class="product-item" data-category="hair-blend">
+                    <div class="card-3d product-card">
+                        <div class="card-image">
+                            <img src="assets/img/product-9.jpg" alt="Water Wave Bundles">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Water Wave Bundles (3pcs)', '₦70,000', 'Set of 3 water wave bundles in beautiful brown shade. Perfect for a full, voluminous install.', 'assets/img/product-9.jpg')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Water Wave Bundles (3pcs)</h5>
+                            <p class="card-text">Three bundles of beautiful water wave hair.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="card-price">₦70,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Water Wave Bundles (3pcs)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProductTitle">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="product-detail-image">
+                                <img id="modalProductImage" src="" alt="Product">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-detail-info">
+                                <h4 id="modalProductName">Product Name</h4>
+                                <p class="card-price" id="modalProductPrice" style="font-size: 1.8rem; margin-bottom: 20px;">₦0</p>
+                                <p id="modalProductDescription">Product description goes here.</p>
+                                
+                                <h5 style="margin-top: 25px; margin-bottom: 15px;">Features:</h5>
+                                <ul class="product-features">
+                                    <li><i class="bi bi-check-circle-fill"></i> 100% Premium Quality</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Tangle-Free & Shedding-Free</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Can be Dyed & Styled</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Long-Lasting Durability</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Natural Look & Feel</li>
+                                </ul>
+                                
+                                <div class="d-flex gap-3 mt-4">
+                                    <button class="btn btn-whatsapp flex-fill" id="modalOrderBtn">
+                                        <i class="bi bi-whatsapp me-2"></i>Order on WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Strip -->
+    <section class="cta-strip">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2 class="cta-title">Can't Find What You're Looking For?</h2>
+                <p class="cta-text">Contact us for custom orders and special requests. We can source specific products just for you.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/2348168532364?text=Hello%20Paradize%20Hair%20Store,%20I'm%20looking%20for%20a%20specific%20product..." class="btn btn-whatsapp btn-lg" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Request Custom Order
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-lg" style="border-color: white; color: white;">
+                        <i class="bi bi-envelope me-2"></i>Send Inquiry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand">
+                        <i class="bi bi-gem me-2"></i>Paradize<span>Hair</span>
+                    </a>
+                    <p class="footer-text">Making You Look Good Is Our Priority. We provide premium quality human hair, wigs, and hair care products to enhance your natural beauty.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://wa.me/2348168532364" class="social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h4 class="footer-title">Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Human Hair</a></li>
+                        <li><a href="products.html">Hair Blends</a></li>
+                        <li><a href="products.html">Braided Wigs</a></li>
+                        <li><a href="products.html">Hair Kits</a></li>
+                        <li><a href="products.html">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-text">Subscribe to get exclusive offers and hair care tips.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                        <button type="submit" class="newsletter-btn">
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 Paradize Hair Store. All rights reserved. | 
+                    <a href="contact.html">Contact Us</a> | 
+                    Designed with <i class="bi bi-heart-fill text-danger"></i> by Mary Chinyere Udeh
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Product modal functionality
+        function setProductDetails(name, price, description, image) {
+            document.getElementById('modalProductName').textContent = name;
+            document.getElementById('modalProductPrice').textContent = price;
+            document.getElementById('modalProductDescription').textContent = description;
+            document.getElementById('modalProductImage').src = image;
+            document.getElementById('modalProductImage').alt = name;
+            
+            // Update order button
+            document.getElementById('modalOrderBtn').onclick = function() {
+                orderOnWhatsApp(name);
+            };
+        }
+    </script>
+</body>
+</html>
