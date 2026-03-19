@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products | Paradize Hair Store</title>
     <meta name="description" content="Browse our collection of premium human hair, wigs, braided wigs, hair kits, and accessories. Quality guaranteed.">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +38,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="bi bi-gem me-2"></i>Paradize<span>Hair</span>
+                <i class="bi bi-gem me-2"></i>Paradize<span> Hair Store</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -103,21 +104,22 @@
                 <!-- Product 1 - Human Hair -->
                 <div class="product-item" data-category="human-hair">
                     <div class="card-3d product-card">
-                        <span class="card-badge">Best Seller</span>
-                        <div class="card-image">
-                            <img src="assets/img/product-1.jpg" alt="Silky Straight Bundle">
+                        <span class="card-badge">Luxury</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/hair-bone-straight-1.jpg" alt="Brazilian Bone Straight Hair" class="product-image-slide active">
+                            <img src="assets/img/hair-bone-straight-2.jpg" alt="Brazilian Bone Straight Hair close view" class="product-image-slide">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Silky Straight Bundle', '₦45,000', 'Premium 100% human hair bundle with natural shine and softness. Perfect for sew-ins and wig making.', 'assets/img/product-1.jpg')">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Brazilian Bone Straight Hair', '₦35,000 - ₦400,000+', 'Smooth, sleek luxury straight hair.', 'assets/img/hair-bone-straight-1.jpg', 'Short (10-14 inches): ₦35,000 - ₦90,000||Medium (16-22 inches): ₦90,000 - ₦200,000||Long (24-30 inches): ₦200,000 - ₦400,000+')">
                                     <i class="bi bi-eye me-1"></i>View Details
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Silky Straight Bundle</h5>
-                            <p class="card-text">Premium 100% human hair, soft and tangle-free.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="card-price">₦45,000</span>
-                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Silky Straight Bundle')">
+                            <h5 class="card-title">Brazilian Bone Straight Hair</h5>
+                            <p class="card-text">Smooth, sleek straight hair for polished installs and luxury styling.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">From ₦35,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Brazilian Bone Straight Hair')">
                                     <i class="bi bi-whatsapp"></i>
                                 </button>
                             </div>
@@ -128,70 +130,22 @@
                 <!-- Product 2 - Human Hair -->
                 <div class="product-item" data-category="human-hair">
                     <div class="card-3d product-card">
-                        <span class="card-badge">New</span>
-                        <div class="card-image">
-                            <img src="assets/img/product-2.jpg" alt="Deep Wave Wig">
-                            <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Deep Wave Wig', '₦85,000', 'Luxurious deep wave texture wig, pre-plucked with baby hair for a natural hairline. 150% density.', 'assets/img/product-2.jpg')">
-                                    <i class="bi bi-eye me-1"></i>View Details
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Deep Wave Wig</h5>
-                            <p class="card-text">Pre-plucked lace front wig with baby hair.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="card-price">₦85,000</span>
-                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Deep Wave Wig')">
-                                    <i class="bi bi-whatsapp"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3 - Braided Wigs -->
-                <div class="product-item" data-category="braided-wigs">
-                    <div class="card-3d product-card">
-                        <div class="card-image">
-                            <img src="assets/img/product-3.jpg" alt="Goddess Braids Wig">
-                            <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Goddess Braids Wig', '₦120,000', 'Hand-braided goddess braids wig with intricate patterns. Lightweight and comfortable for everyday wear.', 'assets/img/product-3.jpg')">
-                                    <i class="bi bi-eye me-1"></i>View Details
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Goddess Braids Wig</h5>
-                            <p class="card-text">Handcrafted braided wig with intricate patterns.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="card-price">₦120,000</span>
-                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Goddess Braids Wig')">
-                                    <i class="bi bi-whatsapp"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 4 - Hair Blend -->
-                <div class="product-item" data-category="hair-blend">
-                    <div class="card-3d product-card">
                         <span class="card-badge">Popular</span>
-                        <div class="card-image">
-                            <img src="assets/img/product-4.jpg" alt="Body Wave Blend">
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/hair-body-wave-1.jpg" alt="Brazilian Body Wave Hair" class="product-image-slide active">
+                            <img src="assets/img/hair-body-wave-2.jpg" alt="Brazilian Body Wave Hair side view" class="product-image-slide">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Body Wave Blend', '₦55,000', 'Beautiful body wave texture with human hair blend. Natural brown color with subtle highlights.', 'assets/img/product-4.jpg')">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Brazilian Body Wave Hair', '₦28,000 - ₦250,000+', 'Soft waves with full volume and an easy beginner-friendly finish.', 'assets/img/hair-body-wave-1.jpg', 'Bundles: ₦28,000 - ₦100,000||Full wigs: ₦80,000 - ₦250,000+')">
                                     <i class="bi bi-eye me-1"></i>View Details
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Body Wave Blend</h5>
-                            <p class="card-text">Human hair blend with beautiful body wave.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="card-price">₦55,000</span>
-                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Body Wave Blend')">
+                            <h5 class="card-title">Brazilian Body Wave Hair</h5>
+                            <p class="card-text">Soft waves, full volume, and easy styling for bundles or wigs.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">From ₦28,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Brazilian Body Wave Hair')">
                                     <i class="bi bi-whatsapp"></i>
                                 </button>
                             </div>
@@ -199,24 +153,77 @@
                     </div>
                 </div>
 
-                <!-- Product 5 - Hair Kits -->
-                <div class="product-item" data-category="hair-kits">
+                <!-- Product 3 - Human Hair -->
+                <div class="product-item" data-category="human-hair">
                     <div class="card-3d product-card">
-                        <span class="card-badge">Value Pack</span>
-                        <div class="card-image">
-                            <img src="assets/img/product-5.jpg" alt="Premium Hair Care Kit">
+                        <span class="card-badge">Trending</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/hair-deep-wave-1.jpg" alt="Deep Wave Hair" class="product-image-slide active">
+                            <img src="assets/img/hair-deep-wave-2.jpg" alt="Water Wave Hair" class="product-image-slide">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Premium Hair Care Kit', '₦35,000', 'Complete hair care kit including hair oil, edge control, wig cap, comb, and hair accessories.', 'assets/img/product-5.jpg')">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Deep Wave / Water Wave Hair', '₦50,000 - ₦180,000+', 'Defined curls with a wet-look, trendy finish and soft movement.', 'assets/img/hair-deep-wave-1.jpg', 'Available range: ₦50,000 - ₦180,000+')">
                                     <i class="bi bi-eye me-1"></i>View Details
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Premium Hair Care Kit</h5>
-                            <p class="card-text">Complete care kit for your wigs and extensions.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="card-price">₦35,000</span>
-                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Premium Hair Care Kit')">
+                            <h5 class="card-title">Deep Wave / Water Wave Hair</h5>
+                            <p class="card-text">Defined curls with a trendy wet-look finish and plenty of bounce.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">From ₦50,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Deep Wave / Water Wave Hair')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 - Human Hair -->
+                <div class="product-item" data-category="human-hair">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Natural</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/hair-kinky-curly-1.jpg" alt="Kinky Curly Hair" class="product-image-slide active">
+                            <img src="assets/img/hair-kinky-curly-2.jpg" alt="Afro Texture Hair" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Kinky Curly / Afro Hair', '₦15,000 - ₦120,000+', 'Natural African texture with full volume, rich curl definition, and versatile styling options.', 'assets/img/hair-kinky-curly-1.jpg', 'Available range: ₦15,000 - ₦120,000+')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kinky Curly / Afro Hair</h5>
+                            <p class="card-text">Natural African texture with full volume and soft defined curls.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">From ₦15,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Kinky Curly / Afro Hair')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 - Human Hair -->
+                <div class="product-item" data-category="human-hair">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">High-End</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/hair-bone-straight-2.jpg" alt="Raw Vietnamese Hair" class="product-image-slide active">
+                            <img src="assets/img/hair-body-wave-2.jpg" alt="Raw Cambodian Hair" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Raw Vietnamese / Cambodian Hair', '₦120,000 - ₦400,000+', 'Premium, long-lasting, very soft luxury-grade hair for clients shopping the high-end market.', 'assets/img/hair-bone-straight-2.jpg', 'Available range: ₦120,000 - ₦400,000+')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Raw Vietnamese / Cambodian Hair</h5>
+                            <p class="card-text">High-end luxury hair known for softness, durability, and long wear.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">From ₦120,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Raw Vietnamese / Cambodian Hair')">
                                     <i class="bi bi-whatsapp"></i>
                                 </button>
                             </div>
@@ -227,20 +234,21 @@
                 <!-- Product 6 - Human Hair -->
                 <div class="product-item" data-category="human-hair">
                     <div class="card-3d product-card">
+                        <span class="card-badge">Classic</span>
                         <div class="card-image">
-                            <img src="assets/img/product-6.jpg" alt="Water Wave Wig">
+                            <img src="assets/img/hair-bob-wig-1.jpg" alt="Bob Wig">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Water Wave Wig', '₦95,000', 'Stunning water wave pattern with 180% density. Full and voluminous look with natural movement.', 'assets/img/product-6.jpg')">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Bob Wig (Short Human Hair)', '₦8,000 - ₦75,000+', 'Short stylish human hair wigs that are office-friendly, easy to maintain, and affordable.', 'assets/img/hair-bob-wig-1.jpg', 'Available range: ₦8,000 - ₦75,000+')">
                                     <i class="bi bi-eye me-1"></i>View Details
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Water Wave Wig</h5>
-                            <p class="card-text">Beautiful water wave texture, 180% density.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="card-price">₦95,000</span>
-                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Water Wave Wig')">
+                            <h5 class="card-title">Bob Wig (Short Human Hair)</h5>
+                            <p class="card-text">Short, polished human hair bob for office wear and easy everyday styling.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">From ₦8,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Bob Wig (Short Human Hair)')">
                                     <i class="bi bi-whatsapp"></i>
                                 </button>
                             </div>
@@ -251,21 +259,22 @@
                 <!-- Product 7 - Human Hair -->
                 <div class="product-item" data-category="human-hair">
                     <div class="card-3d product-card">
-                        <span class="card-badge">Classic</span>
-                        <div class="card-image">
-                            <img src="assets/img/product-7.jpg" alt="Bob Wig">
+                        <span class="card-badge">Premium</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/hair-body-wave-1.jpg" alt="HD Lace Wig" class="product-image-slide active">
+                            <img src="assets/img/hair-bone-straight-1.jpg" alt="Full Frontal Wig" class="product-image-slide">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Classic Bob Wig', '₦65,000', 'Sleek and stylish bob cut wig. Perfect for professional settings and everyday elegance.', 'assets/img/product-7.jpg')">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Full Frontal / HD Lace Wig', '₦65,000 - ₦300,000+', 'Premium wig with a realistic hairline and refined HD lace finish.', 'assets/img/hair-body-wave-1.jpg', 'Available range: ₦65,000 - ₦300,000+')">
                                     <i class="bi bi-eye me-1"></i>View Details
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Classic Bob Wig</h5>
-                            <p class="card-text">Sleek bob cut for elegant everyday style.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="card-price">₦65,000</span>
-                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Classic Bob Wig')">
+                            <h5 class="card-title">Full Frontal / HD Lace Wig</h5>
+                            <p class="card-text">Realistic hairline and premium lace finish for a flawless install.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">From ₦65,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Full Frontal / HD Lace Wig')">
                                     <i class="bi bi-whatsapp"></i>
                                 </button>
                             </div>
@@ -276,21 +285,22 @@
                 <!-- Product 8 - Human Hair -->
                 <div class="product-item" data-category="human-hair">
                     <div class="card-3d product-card">
-                        <span class="card-badge">Natural</span>
-                        <div class="card-image">
-                            <img src="assets/img/product-8.jpg" alt="Kinky Curly Wig">
+                        <span class="card-badge">Budget Pick</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/hair-bone-straight-1.jpg" alt="Entry-Level Human Hair Bundles" class="product-image-slide active">
+                            <img src="assets/img/hair-kinky-curly-2.jpg" alt="Affordable Human Hair Bundles" class="product-image-slide">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Kinky Curly Wig', '₦75,000', 'Embrace your natural texture with this beautiful kinky curly wig. Full, bouncy curls that look and feel natural.', 'assets/img/product-8.jpg')">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Cheap Human Hair / Entry-Level Bundles', '₦8,500 - ₦45,000', 'Budget-friendly bundles with lighter density or mixed quality for affordable installs.', 'assets/img/hair-bone-straight-1.jpg', 'Available range: ₦8,500 - ₦45,000')">
                                     <i class="bi bi-eye me-1"></i>View Details
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Kinky Curly Wig</h5>
-                            <p class="card-text">Natural afro texture, full and bouncy curls.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="card-price">₦75,000</span>
-                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Kinky Curly Wig')">
+                            <h5 class="card-title">Cheap Human Hair / Entry-Level Bundles</h5>
+                            <p class="card-text">Affordable entry-level bundles for clients shopping on a smaller budget.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦8,500 - ₦45,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Cheap Human Hair / Entry-Level Bundles')">
                                     <i class="bi bi-whatsapp"></i>
                                 </button>
                             </div>
@@ -301,20 +311,983 @@
                 <!-- Product 9 - Hair Blend -->
                 <div class="product-item" data-category="hair-blend">
                     <div class="card-3d product-card">
-                        <div class="card-image">
-                            <img src="assets/img/product-9.jpg" alt="Water Wave Bundles">
+                        <span class="card-badge">Everyday</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-1.jpg" alt="Straight Human Hair Blend Wig" class="product-image-slide active">
+                            <img src="assets/img/hair-bone-straight-1.jpg" alt="Straight Human Hair Blend Wig close view" class="product-image-slide">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Water Wave Bundles (3pcs)', '₦70,000', 'Set of 3 water wave bundles in beautiful brown shade. Perfect for a full, voluminous install.', 'assets/img/product-9.jpg')">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Straight Human Hair Blend Wig', '₦9,000 - ₦75,000', 'Sleek, smooth blend wig that is very common for office and everyday wear.', 'assets/img/product-1.jpg', 'Standard range: ₦9,000 - ₦30,000||Premium lace versions: ₦50,000 - ₦75,000')">
                                     <i class="bi bi-eye me-1"></i>View Details
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Water Wave Bundles (3pcs)</h5>
-                            <p class="card-text">Three bundles of beautiful water wave hair.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="card-price">₦70,000</span>
-                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Water Wave Bundles (3pcs)')">
+                            <h5 class="card-title">Straight Human Hair Blend Wig</h5>
+                            <p class="card-text">Smooth, office-friendly blend wig with a neat everyday finish.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">From ₦9,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Straight Human Hair Blend Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 - Hair Blend -->
+                <div class="product-item" data-category="hair-blend">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Soft Waves</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-4.jpg" alt="Body Wave Blend Hair" class="product-image-slide active">
+                            <img src="assets/img/hair-body-wave-1.jpg" alt="Body Wave Blend Hair side view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Body Wave Blend Hair', '₦22,000 - ₦80,000', 'Soft waves with a fuller look and beginner-friendly styling.', 'assets/img/product-4.jpg', 'Available range: ₦22,000 - ₦80,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Body Wave Blend Hair</h5>
+                            <p class="card-text">Soft body wave blend with a fuller, easy-to-style finish.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦22,000 - ₦80,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Body Wave Blend Hair')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11 - Hair Blend -->
+                <div class="product-item" data-category="hair-blend">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Trendy</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-9.jpg" alt="Curly Deep Wave Blend Hair" class="product-image-slide active">
+                            <img src="assets/img/hair-deep-wave-1.jpg" alt="Curly Deep Wave Blend Hair close view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Curly / Deep Wave Blend Hair', '₦20,000 - ₦75,000', 'Defined curls with a trendy wet-look blend finish.', 'assets/img/product-9.jpg', 'Available range: ₦20,000 - ₦75,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Curly / Deep Wave Blend Hair</h5>
+                            <p class="card-text">Defined curl blend with a trendy deep-wave, wet-look appeal.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦20,000 - ₦75,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Curly / Deep Wave Blend Hair')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12 - Hair Blend -->
+                <div class="product-item" data-category="hair-blend">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Budget Bob</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-7.jpg" alt="Bob Blend Wig" class="product-image-slide active">
+                            <img src="assets/img/hair-bob-wig-1.jpg" alt="Bob Blend Wig style view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Bob Blend Wig (Short Hair)', '₦9,000 - ₦25,000', 'Short, classy, and very affordable bob blend wig.', 'assets/img/product-7.jpg', 'Available range: ₦9,000 - ₦25,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bob Blend Wig (Short Hair)</h5>
+                            <p class="card-text">Short, classy blend bob built for affordable everyday style.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦9,000 - ₦25,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Bob Blend Wig (Short Hair)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 13 - Hair Blend -->
+                <div class="product-item" data-category="hair-blend">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Premium Blend</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-2.jpg" alt="Lace Front Human Hair Blend Wig" class="product-image-slide active">
+                            <img src="assets/img/hair-body-wave-2.jpg" alt="Lace Front Human Hair Blend Wig close view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Lace Front Human Hair Blend Wig', '₦50,000 - ₦80,000', 'Blend wig with a more natural hairline and a more premium lace-front finish.', 'assets/img/product-2.jpg', 'Available range: ₦50,000 - ₦80,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lace Front Human Hair Blend Wig</h5>
+                            <p class="card-text">Premium lace-front blend with a more realistic hairline look.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦50,000 - ₦80,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Lace Front Human Hair Blend Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 14 - Hair Blend -->
+                <div class="product-item" data-category="hair-blend">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Closure</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-4.jpg" alt="Closure Blend Wig" class="product-image-slide active">
+                            <img src="assets/img/product-2.jpg" alt="Closure Blend Wig styling view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Closure Blend Wig (4x4 / 5x5)', '₦22,000 - ₦70,000', 'Middle-part or side-part blend wig finished with a 4x4 or 5x5 closure.', 'assets/img/product-4.jpg', 'Available range: ₦22,000 - ₦70,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Closure Blend Wig (4x4 / 5x5)</h5>
+                            <p class="card-text">Easy closure blend wig styled for neat middle or side part wear.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦22,000 - ₦70,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Closure Blend Wig (4x4 / 5x5)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 15 - Hair Blend -->
+                <div class="product-item" data-category="hair-blend">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Colored</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-4.jpg" alt="Colored Ombre Blend Hair" class="product-image-slide active">
+                            <img src="assets/img/product-9.jpg" alt="Colored Ombre Blend Hair side view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Colored / Ombre Blend Hair', '₦10,000 - ₦25,000', 'Pre-colored blend hair in blonde, burgundy, ombre, and highlighted finishes.', 'assets/img/product-4.jpg', 'Available range: ₦10,000 - ₦25,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Colored / Ombre Blend Hair</h5>
+                            <p class="card-text">Pre-colored blend styles in blonde, burgundy, and highlighted tones.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦10,000 - ₦25,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Colored / Ombre Blend Hair')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 16 - Braided Wigs -->
+                <div class="product-item" data-category="braided-wigs">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Lightweight</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/gallery-2.jpg" alt="Knotless Box Braid Wig" class="product-image-slide active">
+                            <img src="assets/img/product-3.jpg" alt="Knotless Box Braid Wig close view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Knotless Box Braid Wig', '₦25,000 - ₦85,000', 'Natural-looking lightweight braids with no visible knots.', 'assets/img/gallery-2.jpg', 'Available range: ₦25,000 - ₦85,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Knotless Box Braid Wig</h5>
+                            <p class="card-text">Natural-looking knotless braids with a lightweight, comfortable finish.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦25,000 - ₦85,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Knotless Box Braid Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 17 - Braided Wigs -->
+                <div class="product-item" data-category="braided-wigs">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Classic</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-3.jpg" alt="Full Box Braid Wig" class="product-image-slide active">
+                            <img src="assets/img/gallery-3.jpg" alt="Full Box Braid Wig style view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Full Box Braid Wig (Regular Braids)', '₦19,000 - ₦40,000', 'Classic full braids with a fuller and slightly heavier finish.', 'assets/img/product-3.jpg', 'Available range: ₦19,000 - ₦40,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Full Box Braid Wig</h5>
+                            <p class="card-text">Classic regular braids with fuller coverage and a timeless braided look.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦19,000 - ₦40,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Full Box Braid Wig (Regular Braids)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 18 - Braided Wigs -->
+                <div class="product-item" data-category="braided-wigs">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Cornrow</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/gallery-1.jpg" alt="Cornrow Braided Wig" class="product-image-slide active">
+                            <img src="assets/img/gallery-4.jpg" alt="Cornrow Braided Wig side view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Cornrow Braided Wig', '₦28,000 - ₦65,000', 'Flat braids inspired by Ghana weaving and straight-back styles.', 'assets/img/gallery-1.jpg', 'Available range: ₦28,000 - ₦65,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cornrow Braided Wig</h5>
+                            <p class="card-text">Flat braided style for clients who want a neat Ghana-weaving finish.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦28,000 - ₦65,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Cornrow Braided Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 19 - Braided Wigs -->
+                <div class="product-item" data-category="braided-wigs">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Twists</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/gallery-5.jpg" alt="Twist Braided Wig" class="product-image-slide active">
+                            <img src="assets/img/gallery-3.jpg" alt="Twist Braided Wig close view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Twist Braided Wig (Senegalese / Spring Twist)', '₦20,000 - ₦60,000', 'Soft rope-like twists with a stylish and easy-to-wear finish.', 'assets/img/gallery-5.jpg', 'Available range: ₦20,000 - ₦60,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Twist Braided Wig</h5>
+                            <p class="card-text">Soft Senegalese or spring twists with a stylish rope-like finish.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦20,000 - ₦60,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Twist Braided Wig (Senegalese / Spring Twist)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 20 - Braided Wigs -->
+                <div class="product-item" data-category="braided-wigs">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Locs</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/gallery-6.jpg" alt="Faux Locs Braided Wig" class="product-image-slide active">
+                            <img src="assets/img/gallery-5.jpg" alt="Faux Locs Braided Wig style view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Faux Locs Braided Wig', '₦30,000 - ₦100,000+', 'Dreadlock-style braided wig with a trendy bohemian finish.', 'assets/img/gallery-6.jpg', 'Available range: ₦30,000 - ₦100,000+')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Faux Locs Braided Wig</h5>
+                            <p class="card-text">Bohemian dreadlock-inspired wig for a bold, trendy statement.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦30,000 - ₦100,000+</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Faux Locs Braided Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 21 - Braided Wigs -->
+                <div class="product-item" data-category="braided-wigs">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Premium</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-3.jpg" alt="Bohemian Goddess Braid Wig" class="product-image-slide active">
+                            <img src="assets/img/gallery-2.jpg" alt="Bohemian Goddess Braid Wig side view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Bohemian / Goddess Braid Wig', '₦50,000 - ₦150,000+', 'Braids with curly ends for a premium, trendy bohemian finish.', 'assets/img/product-3.jpg', 'Available range: ₦50,000 - ₦150,000+')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bohemian / Goddess Braid Wig</h5>
+                            <p class="card-text">Curly-ended premium braid wig for that trendy goddess-braid finish.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦50,000 - ₦150,000+</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Bohemian / Goddess Braid Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 22 - Braided Wigs -->
+                <div class="product-item" data-category="braided-wigs">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Detailed</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/gallery-3.jpg" alt="Micro Braid Wig" class="product-image-slide active">
+                            <img src="assets/img/gallery-4.jpg" alt="Tiny Braid Wig close view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Micro Braid / Tiny Braid Wig', '₦70,000 - ₦200,000+', 'Very small detailed braids with a time-intensive premium finish.', 'assets/img/gallery-3.jpg', 'Available range: ₦70,000 - ₦200,000+')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Micro Braid / Tiny Braid Wig</h5>
+                            <p class="card-text">Tiny, highly detailed braids for clients who want a premium braided finish.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦70,000 - ₦200,000+</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Micro Braid / Tiny Braid Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 23 - Braided Wigs -->
+                <div class="product-item" data-category="braided-wigs">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Short & Easy</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/gallery-1.jpg" alt="Short Braided Wig" class="product-image-slide active">
+                            <img src="assets/img/product-7.jpg" alt="Short Braided Bob Wig" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Short Braided Wig (Bob / Shoulder Length)', '₦8,000 - ₦25,000', 'Short braided wig that is lightweight, easy to wear, and affordable.', 'assets/img/gallery-1.jpg', 'Available range: ₦8,000 - ₦25,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Short Braided Wig</h5>
+                            <p class="card-text">Bob or shoulder-length braided wig built for lighter and easier wear.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦8,000 - ₦25,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Short Braided Wig (Bob / Shoulder Length)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 24 - Braided Wigs -->
+                <div class="product-item" data-category="braided-wigs">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Quick Wear</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/gallery-6.jpg" alt="Ponytail Braided Wig" class="product-image-slide active">
+                            <img src="assets/img/gallery-5.jpg" alt="Bun Braided Wig style view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Ponytail / Bun Braided Wig', '₦8,000 - ₦20,000', 'Quick-wear braided ponytail or bun style for easy styling on the go.', 'assets/img/gallery-6.jpg', 'Available range: ₦8,000 - ₦20,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ponytail / Bun Braided Wig</h5>
+                            <p class="card-text">Quick-wear braided add-on style for effortless ponytail or bun looks.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦8,000 - ₦20,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Ponytail / Bun Braided Wig')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 25 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Essential</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-5.jpg" alt="Hair Relaxer Kit" class="product-image-slide active">
+                            <img src="assets/img/product-1.jpg" alt="Hair Relaxer Kit contents" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Hair Relaxer Kit (Complete Set)', '₦3,000 - ₦12,000', 'Includes relaxer cream, activator, shampoo, conditioner, and gloves.', 'assets/img/product-5.jpg', 'Available range: ₦3,000 - ₦12,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Relaxer Kit</h5>
+                            <p class="card-text">Complete relaxer set for smooth treatment and post-care support.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦3,000 - ₦12,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Hair Relaxer Kit (Complete Set)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 26 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Starter</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-5.jpg" alt="Wig Making Kit" class="product-image-slide active">
+                            <img src="assets/img/product-2.jpg" alt="Wig Making Kit tools" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Wig Making Kit (Starter Kit)', '₦15,000 - ₦80,000', 'Includes wig cap, needle, thread, mannequin head, stand, and clips.', 'assets/img/product-5.jpg', 'Available range: ₦15,000 - ₦80,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Wig Making Kit</h5>
+                            <p class="card-text">Starter set for learning and building custom wigs with the right tools.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦15,000 - ₦80,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Wig Making Kit (Starter Kit)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 27 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Tools</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-5.jpg" alt="Hair Styling Tool Kit" class="product-image-slide active">
+                            <img src="assets/img/product-7.jpg" alt="Hair Styling Tool Kit accessories" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Hair Styling Tool Kit (Accessories Set)', '₦3,000 - ₦15,000', 'Includes combs, clips, rollers, bun maker, and sectioning tools.', 'assets/img/product-5.jpg', 'Available range: ₦3,000 - ₦15,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Styling Tool Kit</h5>
+                            <p class="card-text">Accessory set packed with everyday styling tools and sectioning essentials.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦3,000 - ₦15,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Hair Styling Tool Kit (Accessories Set)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 28 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Electric</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-6.jpg" alt="Electric Hair Styling Kit" class="product-image-slide active">
+                            <img src="assets/img/product-8.jpg" alt="Straightener and Curler Set" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Electric Hair Styling Kit (Straightener + Curler Set)', '₦7,000 - ₦30,000', 'Includes a straightener, curler, and sometimes a hair dryer depending on the set.', 'assets/img/product-6.jpg', 'Available range: ₦7,000 - ₦30,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Electric Hair Styling Kit</h5>
+                            <p class="card-text">Heat-styling set built around straighteners, curlers, and dryer options.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦7,000 - ₦30,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Electric Hair Styling Kit (Straightener + Curler Set)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 29 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Natural Care</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-5.jpg" alt="Natural Hair Care Kit" class="product-image-slide active">
+                            <img src="assets/img/product-4.jpg" alt="Natural Hair Care Kit products" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Natural Hair Care Kit', '₦10,000 - ₦45,000', 'Includes shampoo, conditioner, oils, leave-in products, and treatment care.', 'assets/img/product-5.jpg', 'Available range: ₦10,000 - ₦45,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Natural Hair Care Kit</h5>
+                            <p class="card-text">Daily care bundle for cleansing, moisturizing, and treating natural hair.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦10,000 - ₦45,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Natural Hair Care Kit')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 30 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Braider Pack</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-5.jpg" alt="Braiding Kit" class="product-image-slide active">
+                            <img src="assets/img/gallery-2.jpg" alt="Braiding Kit accessories" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Braiding Kit / Braider Starter Pack', '₦5,000 - ₦20,000', 'Includes combs, hair clips, thread, beads, and braiding accessories.', 'assets/img/product-5.jpg', 'Available range: ₦5,000 - ₦20,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Braiding Kit / Braider Starter Pack</h5>
+                            <p class="card-text">Starter braiding set with the small essentials needed for braid prep.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦5,000 - ₦20,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Braiding Kit / Braider Starter Pack')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 31 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Bundle Set</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-1.jpg" alt="Hair Extension Bundle Kit" class="product-image-slide active">
+                            <img src="assets/img/product-2.jpg" alt="Hair Extension Bundle Kit frontal set" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Hair Extension / Bundle Kit', '₦40,000 - ₦250,000+', 'Includes bundles paired with a closure or frontal depending on the package.', 'assets/img/product-1.jpg', 'Available range: ₦40,000 - ₦250,000+')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Extension / Bundle Kit</h5>
+                            <p class="card-text">Bundle package paired with a closure or frontal for complete installs.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦40,000 - ₦250,000+</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Hair Extension / Bundle Kit')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 32 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Repair</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-5.jpg" alt="Hair Repair Treatment Kit" class="product-image-slide active">
+                            <img src="assets/img/product-4.jpg" alt="Hair Repair Treatment Kit products" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Hair Repair / Treatment Kit', '₦8,000 - ₦35,000', 'Includes protein treatment, oils, conditioner, and hair mask for repair care.', 'assets/img/product-5.jpg', 'Available range: ₦8,000 - ₦35,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Repair / Treatment Kit</h5>
+                            <p class="card-text">Repair-focused bundle with treatment, oils, and strengthening care.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦8,000 - ₦35,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Hair Repair / Treatment Kit')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 33 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Salon Pro</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-6.jpg" alt="Professional Salon Kit" class="product-image-slide active">
+                            <img src="assets/img/product-5.jpg" alt="Professional Salon Kit tools" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Professional Salon Kit (Full Package)', '₦50,000 - ₦200,000+', 'Includes dryer, clipper, straightener, combs, and salon accessories. Individual tools like dryers and curlers often range from ₦5,000 - ₦20,000.', 'assets/img/product-6.jpg', 'Full package: ₦50,000 - ₦200,000+||Individual dryers/curlers: ₦5,000 - ₦20,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Professional Salon Kit</h5>
+                            <p class="card-text">Full salon-ready package with electric tools and daily workstation essentials.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦50,000 - ₦200,000+</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Professional Salon Kit (Full Package)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 34 - Hair Kits -->
+                <div class="product-item" data-category="hair-kits">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Value Pack</span>
+                        <div class="card-image">
+                            <img src="assets/img/product-5.jpg" alt="Premium Hair Care Kit">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Premium Hair Care Kit', '₦35,000', 'Complete hair care kit including hair oil, edge control, wig cap, comb, and hair accessories.', 'assets/img/product-5.jpg', 'Current package: ₦35,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Hair Care Kit</h5>
+                            <p class="card-text">Complete care kit for your wigs and extensions.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦35,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Premium Hair Care Kit')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 35 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Trendy</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-7.jpg" alt="Hair Clips" class="product-image-slide active">
+                            <img src="assets/img/product-5.jpg" alt="Claw Clips set" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Hair Clips / Claw Clips', '₦500 - ₦5,000', 'Used for holding hair in place for everyday wear and trendy styling.', 'assets/img/product-7.jpg', 'Single pieces: ₦500 - ₦5,000||Sets: ₦1,000 - ₦4,500')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Clips / Claw Clips</h5>
+                            <p class="card-text">Trendy everyday clips for holding hair securely in place.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦500 - ₦5,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Hair Clips / Claw Clips')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 36 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Soft Hold</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-7.jpg" alt="Scrunchies" class="product-image-slide active">
+                            <img src="assets/img/product-4.jpg" alt="Scrunchies premium set" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Scrunchies (Hair Bands)', '₦500 - ₦10,000', 'Soft elastic bands for ponytails and daily styling.', 'assets/img/product-7.jpg', 'Standard range: ₦500 - ₦3,000||Premium silk sets: ₦3,000 - ₦10,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Scrunchies</h5>
+                            <p class="card-text">Soft hair bands for ponytails, buns, and comfortable daily styling.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦500 - ₦10,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Scrunchies (Hair Bands)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 37 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Stylish</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-7.jpg" alt="Headbands" class="product-image-slide active">
+                            <img src="assets/img/gallery-1.jpg" alt="Alice Bands designer style" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Headbands / Alice Bands', '₦1,000 - ₦10,000+', 'Stylish bands worn over the head for beauty and convenience.', 'assets/img/product-7.jpg', 'Standard range: ₦1,000 - ₦5,000||Designer types: ₦10,000+')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Headbands / Alice Bands</h5>
+                            <p class="card-text">Classic headbands for stylish finishing touches and quick wear.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦1,000 - ₦10,000+</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Headbands / Alice Bands')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 38 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Protective</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-8.jpg" alt="Hair Bonnets" class="product-image-slide active">
+                            <img src="assets/img/product-5.jpg" alt="Hair Bonnets sleep cap set" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Hair Bonnets (Sleep Caps)', '₦1,500 - ₦7,500', 'Protects hair while sleeping and helps maintain hairstyles overnight.', 'assets/img/product-8.jpg', 'Available range: ₦1,500 - ₦7,500')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Bonnets</h5>
+                            <p class="card-text">Sleep caps that help protect hair and reduce friction overnight.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦1,500 - ₦7,500</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Hair Bonnets (Sleep Caps)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 39 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Essential</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-5.jpg" alt="Hair Combs" class="product-image-slide active">
+                            <img src="assets/img/product-7.jpg" alt="Hair Combs styling set" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Hair Combs (Styling & Detangling)', '₦500 - ₦3,500', 'Used for styling, parting, and detangling different hair types.', 'assets/img/product-5.jpg', 'Available range: ₦500 - ₦3,500')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Combs</h5>
+                            <p class="card-text">Everyday combs for parting, detangling, and styling work.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦500 - ₦3,500</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Hair Combs (Styling & Detangling)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 40 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">No Heat</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-6.jpg" alt="Hair Rollers" class="product-image-slide active">
+                            <img src="assets/img/product-8.jpg" alt="Hair Rollers and Curlers set" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Hair Rollers / Curlers', '₦1,500 - ₦6,000', 'Used for creating curls and shape without direct heat.', 'assets/img/product-6.jpg', 'Available range: ₦1,500 - ₦6,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Rollers / Curlers</h5>
+                            <p class="card-text">Curling tools for shaping hair without heavy heat exposure.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦1,500 - ₦6,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Hair Rollers / Curlers')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 41 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Wig Base</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-5.jpg" alt="Wig Caps" class="product-image-slide active">
+                            <img src="assets/img/product-2.jpg" alt="Wig Caps close pack" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Wig Caps', '₦500 - ₦2,500', 'Worn under wigs for protection, grip, and a smoother install.', 'assets/img/product-5.jpg', 'Available range: ₦500 - ₦2,500')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Wig Caps</h5>
+                            <p class="card-text">Protective wig bases that improve grip and keep installs neat.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦500 - ₦2,500</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Wig Caps')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 42 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Pins</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-7.jpg" alt="Bobby Pins" class="product-image-slide active">
+                            <img src="assets/img/product-5.jpg" alt="Hair Pins pack" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Bobby Pins / Hair Pins', '₦300 - ₦2,000', 'Small pins used to secure styles and finish hair neatly.', 'assets/img/product-7.jpg', 'Standard range: ₦300 - ₦2,000||Packs available from: ₦499')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bobby Pins / Hair Pins</h5>
+                            <p class="card-text">Small style-holding pins for securing edges, buns, and soft updos.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦300 - ₦2,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Bobby Pins / Hair Pins')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 43 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Protective Style</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/gallery-1.jpg" alt="Hair Scarves" class="product-image-slide active">
+                            <img src="assets/img/gallery-5.jpg" alt="Hair Turbans style view" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Hair Scarves / Turbans', '₦2,000 - ₦10,000+', 'Fashion-forward protective accessories for styling and hair coverage.', 'assets/img/gallery-1.jpg', 'Available range: ₦2,000 - ₦10,000+')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Scarves / Turbans</h5>
+                            <p class="card-text">Protective and fashion-ready wraps for styling, coverage, and comfort.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦2,000 - ₦10,000+</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Hair Scarves / Turbans')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 44 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Braids Decor</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/gallery-2.jpg" alt="Hair Beads" class="product-image-slide active">
+                            <img src="assets/img/gallery-3.jpg" alt="Hair decoration accessories" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Beads & Hair Decoration Accessories', '₦1,000 - ₦5,000', 'Decorative accessories used especially for braid styling like Fulani-inspired looks.', 'assets/img/gallery-2.jpg', 'Available range: ₦1,000 - ₦5,000')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Beads & Hair Decoration Accessories</h5>
+                            <p class="card-text">Decor pieces for braids, especially stylish Fulani-inspired finishes.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦1,000 - ₦5,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Beads & Hair Decoration Accessories')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 45 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Brush Set</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-5.jpg" alt="Hair Brushes" class="product-image-slide active">
+                            <img src="assets/img/product-8.jpg" alt="Scalp massage brush" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Hair Brushes (Styling & Growth Tools)', '₦1,000 - ₦5,000', 'Brushes for detangling, styling, and scalp massage support.', 'assets/img/product-5.jpg', 'Standard range: ₦1,000 - ₦5,000||Scalp massagers: around ₦1,100+')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Brushes</h5>
+                            <p class="card-text">Brushes and scalp tools for detangling, styling, and growth routines.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦1,000 - ₦5,000</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Hair Brushes (Styling & Growth Tools)')">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 46 - Accessories -->
+                <div class="product-item" data-category="accessories">
+                    <div class="card-3d product-card">
+                        <span class="card-badge">Edge Care</span>
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img src="assets/img/product-5.jpg" alt="Edge Control Tools" class="product-image-slide active">
+                            <img src="assets/img/product-7.jpg" alt="Edge Brush and Gel tools" class="product-image-slide">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal" onclick="setProductDetails('Edge Control Tools (Edge Brush + Gel Tools)', '₦500 - ₦2,500', 'Tools used for laying baby hairs and smoothing edges neatly.', 'assets/img/product-5.jpg', 'Available range: ₦500 - ₦2,500')">
+                                    <i class="bi bi-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Edge Control Tools</h5>
+                            <p class="card-text">Edge brushes and tools for laid baby hairs and neat finishing.</p>
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="card-price">₦500 - ₦2,500</span>
+                                <button class="btn btn-whatsapp btn-sm" onclick="orderOnWhatsApp('Edge Control Tools (Edge Brush + Gel Tools)')">
                                     <i class="bi bi-whatsapp"></i>
                                 </button>
                             </div>
@@ -327,8 +1300,8 @@
 
     <!-- Product Modal -->
     <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
+        <div class="modal-dialog modal-dialog-centered product-modal-dialog">
+            <div class="modal-content product-modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalProductTitle">Product Details</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -345,6 +1318,10 @@
                                 <h4 id="modalProductName">Product Name</h4>
                                 <p class="card-price" id="modalProductPrice" style="font-size: 1.8rem; margin-bottom: 20px;">₦0</p>
                                 <p id="modalProductDescription">Product description goes here.</p>
+                                <div class="product-price-guide" id="modalPriceGuide" hidden>
+                                    <h5 style="margin-top: 25px; margin-bottom: 15px;">Price Guide</h5>
+                                    <ul class="product-features modal-price-breakdown" id="modalPriceBreakdown"></ul>
+                                </div>
                                 
                                 <h5 style="margin-top: 25px; margin-bottom: 15px;">Features:</h5>
                                 <ul class="product-features">
@@ -447,12 +1424,29 @@
     <script src="assets/js/script.js"></script>
     <script>
         // Product modal functionality
-        function setProductDetails(name, price, description, image) {
+        function setProductDetails(name, price, description, image, priceBreakdown = '') {
             document.getElementById('modalProductName').textContent = name;
+            document.getElementById('modalProductTitle').textContent = name;
             document.getElementById('modalProductPrice').textContent = price;
             document.getElementById('modalProductDescription').textContent = description;
             document.getElementById('modalProductImage').src = image;
             document.getElementById('modalProductImage').alt = name;
+
+            const priceGuide = document.getElementById('modalPriceGuide');
+            const priceBreakdownList = document.getElementById('modalPriceBreakdown');
+            const breakdownItems = priceBreakdown
+                ? priceBreakdown.split('||').map(item => item.trim()).filter(Boolean)
+                : [];
+
+            if (breakdownItems.length) {
+                priceBreakdownList.innerHTML = breakdownItems
+                    .map(item => `<li><i class="bi bi-dot"></i>${item}</li>`)
+                    .join('');
+                priceGuide.hidden = false;
+            } else {
+                priceBreakdownList.innerHTML = '';
+                priceGuide.hidden = true;
+            }
             
             // Update order button
             document.getElementById('modalOrderBtn').onclick = function() {

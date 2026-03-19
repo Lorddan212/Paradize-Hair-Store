@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initCountUpAnimation();
     initProductFilter();
+    initProductCardSliders();
     initGalleryFilter();
     initLightbox();
     initContactForm();
@@ -170,6 +171,27 @@ function initProductFilter() {
 }
 
 // ============================================
+// PRODUCT CARD IMAGE SLIDERS
+// ============================================
+function initProductCardSliders() {
+    const sliders = document.querySelectorAll('[data-product-slider]');
+    
+    sliders.forEach(slider => {
+        const slides = slider.querySelectorAll('.product-image-slide');
+        if (slides.length < 2) return;
+        
+        let currentIndex = 0;
+        slides[currentIndex].classList.add('active');
+        
+        setInterval(() => {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }, 3200);
+    });
+}
+
+// ============================================
 // GALLERY FILTER
 // ============================================
 function initGalleryFilter() {
@@ -282,12 +304,14 @@ function initLightbox() {
 // ============================================
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
+    const submitButton = document.getElementById('contactSubmitBtn');
     
-    contactForm?.addEventListener('submit', function(e) {
+    contactForm?.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Clear previous errors
         clearErrors();
+        clearFormAlert();
         
         let isValid = true;
         
@@ -338,9 +362,46 @@ function initContactForm() {
         }
         
         if (isValid) {
-            // Show success message
-            showFormSuccess();
-            contactForm.reset();
+            const endpoint = contactForm.dataset.formEndpoint?.trim();
+            
+            if (!endpoint || endpoint.includes('your-form-id')) {
+                showFormAlert('Form sending is not fully connected yet. Add your Formspree form endpoint in contact.html to receive messages.', 'error');
+                return;
+            }
+            
+            const originalButtonHtml = submitButton?.innerHTML;
+            
+            try {
+                if (submitButton) {
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+                }
+                
+                const formData = new FormData(contactForm);
+                formData.append('_page', window.location.pathname);
+                
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Submission failed');
+                }
+                
+                showFormSuccess();
+                contactForm.reset();
+            } catch (error) {
+                showFormAlert('We could not send your message right now. Please try again or contact us by WhatsApp.', 'error');
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonHtml;
+                }
+            }
         }
     });
     
@@ -361,28 +422,38 @@ function initContactForm() {
         errors.forEach(error => error.classList.remove('show'));
     }
     
-    function showFormSuccess() {
-        // Create success alert
+    function clearFormAlert() {
+        const existingAlert = contactForm.querySelector('.form-status-alert');
+        if (existingAlert) existingAlert.remove();
+    }
+    
+    function showFormAlert(message, type) {
+        clearFormAlert();
+        
         const alert = document.createElement('div');
-        alert.className = 'alert alert-success mt-4';
+        const isSuccess = type === 'success';
+        alert.className = `alert mt-4 form-status-alert ${isSuccess ? 'alert-success' : 'alert-danger'}`;
         alert.style.cssText = `
-            background: linear-gradient(135deg, #10B981, #059669);
+            background: ${isSuccess
+                ? 'linear-gradient(135deg, #10B981, #059669)'
+                : 'linear-gradient(135deg, #EF4444, #DC2626)'};
             color: white;
             padding: 20px;
             border-radius: 12px;
             text-align: center;
             animation: fadeIn 0.5s ease;
         `;
-        alert.innerHTML = `
-            <i class="bi bi-check-circle-fill me-2"></i>
-            <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon!
-        `;
+        alert.innerHTML = `<i class="bi bi-${isSuccess ? 'check-circle-fill' : 'exclamation-triangle-fill'} me-2"></i>${message}`;
         
         contactForm.appendChild(alert);
         
         setTimeout(() => {
             alert.remove();
         }, 5000);
+    }
+    
+    function showFormSuccess() {
+        showFormAlert("<strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon!", 'success');
     }
     
     // Real-time validation
