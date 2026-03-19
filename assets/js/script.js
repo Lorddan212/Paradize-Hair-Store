@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initParticles();
     initHeroParticles();
     init3DCardEffect();
-    initNewsletterForm();
 });
 
 // ============================================
@@ -568,58 +567,6 @@ function init3DCardEffect() {
             this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
         });
     });
-}
-
-// ============================================
-// NEWSLETTER FORM
-// ============================================
-function initNewsletterForm() {
-    const newsletterForm = document.getElementById('newsletterForm');
-    
-    newsletterForm?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const email = this.querySelector('input[type="email"]');
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        
-        if (!email.value.trim()) {
-            showNewsletterMessage('Please enter your email address', 'error');
-            return;
-        }
-        
-        if (!emailRegex.test(email.value)) {
-            showNewsletterMessage('Please enter a valid email address', 'error');
-            return;
-        }
-        
-        // Simulate subscription success
-        showNewsletterMessage('Thank you for subscribing!', 'success');
-        email.value = '';
-    });
-    
-    function showNewsletterMessage(message, type) {
-        const existingMessage = document.querySelector('.newsletter-message');
-        if (existingMessage) existingMessage.remove();
-        
-        const messageEl = document.createElement('div');
-        messageEl.className = `newsletter-message mt-3 ${type}`;
-        messageEl.style.cssText = `
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            animation: fadeIn 0.3s ease;
-            ${type === 'success' 
-                ? 'background: linear-gradient(135deg, #10B981, #059669); color: white;' 
-                : 'background: linear-gradient(135deg, #EF4444, #DC2626); color: white;'}
-        `;
-        messageEl.innerHTML = `<i class="bi bi-${type === 'success' ? 'check' : 'exclamation'}-circle-fill me-2"></i>${message}`;
-        
-        newsletterForm.appendChild(messageEl);
-        
-        setTimeout(() => {
-            messageEl.remove();
-        }, 4000);
-    }
 }
 
 // ============================================
