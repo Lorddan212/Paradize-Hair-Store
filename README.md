@@ -64,6 +64,19 @@ Hair Vendor Portfolio/
 
 For a better development experience, you can run it with a local server such as the VS Code **Live Server** extension.
 
+## Contact Form Setup
+
+The contact form is prepared for **Formspree** submissions.
+
+To make it send real emails:
+
+1. Create a form in Formspree.
+2. Copy your Formspree endpoint, which looks like `https://formspree.io/f/your-form-id`.
+3. Open `contact.html`.
+4. Replace the `data-form-endpoint` value on the `#contactForm` element with your real Formspree endpoint.
+
+After that, messages submitted from the contact page will be sent through Formspree instead of showing only a demo success message.
+
 ## Customization
 
 You can easily adapt this project for another hair brand or beauty business by updating:
