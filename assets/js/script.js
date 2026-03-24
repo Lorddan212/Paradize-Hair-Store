@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCountUpAnimation();
     initProductFilter();
     initProductCardSliders();
+    initHeroImageSlider();
     initGalleryFilter();
     initLightbox();
     initContactForm();
@@ -189,6 +190,26 @@ function initProductCardSliders() {
             slides[currentIndex].classList.add('active');
         }, 3200);
     });
+}
+
+function initHeroImageSlider() {
+    const heroSlider = document.querySelector('[data-hero-image-slider]');
+    if (!heroSlider) return;
+
+    const slides = heroSlider.querySelectorAll('.hero-image-slide');
+    if (slides.length < 2) return;
+
+    let currentIndex = 0;
+
+    slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentIndex);
+    });
+
+    setInterval(() => {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }, 4000);
 }
 
 // ============================================
@@ -745,8 +766,73 @@ function callNow() {
 // ============================================
 // PRODUCT MODAL FUNCTION
 // ============================================
+const featuredProductModalData = {
+    'straight-bundle': {
+        name: 'Silky Straight Bundle',
+        price: '₦45,000',
+        description: 'Premium 100% human hair, soft and tangle-free with natural shine.',
+        image: 'assets/img/Silky_Straight_Bundle_1.jpg'
+    },
+    'deep-wave-wig': {
+        name: 'Deep Wave Wig',
+        price: '₦85,000',
+        description: 'Luxurious deep wave texture, pre-plucked with baby hair.',
+        image: 'assets/img/Deep_Wave_Wig_1.jpg'
+    },
+    'goddess-braids': {
+        name: 'Goddess Braids Wig',
+        price: '₦120,000',
+        description: 'Hand-braided perfection with intricate patterns and long-lasting quality.',
+        image: 'assets/img/Goddess_Braids_Wig_1.jpg'
+    }
+};
+
+function setProductModalDetails(product) {
+    const modalElements = {
+        title: document.getElementById('modalProductTitle'),
+        name: document.getElementById('modalProductName'),
+        price: document.getElementById('modalProductPrice'),
+        description: document.getElementById('modalProductDescription'),
+        image: document.getElementById('modalProductImage'),
+        priceGuide: document.getElementById('modalPriceGuide'),
+        priceBreakdown: document.getElementById('modalPriceBreakdown'),
+        orderButton: document.getElementById('modalOrderBtn')
+    };
+
+    if (!modalElements.title || !modalElements.name || !modalElements.price || !modalElements.description || !modalElements.image || !modalElements.orderButton) {
+        return false;
+    }
+
+    modalElements.title.textContent = product.name;
+    modalElements.name.textContent = product.name;
+    modalElements.price.textContent = product.price;
+    modalElements.description.textContent = product.description;
+    modalElements.image.src = product.image;
+    modalElements.image.alt = product.name;
+
+    if (modalElements.priceGuide && modalElements.priceBreakdown) {
+        modalElements.priceBreakdown.innerHTML = '';
+        modalElements.priceGuide.hidden = true;
+    }
+
+    modalElements.orderButton.onclick = function() {
+        orderOnWhatsApp(product.name);
+    };
+
+    return true;
+}
+
 function openProductModal(productId) {
-    const modal = new bootstrap.Modal(document.getElementById('productModal'));
+    const modalElement = document.getElementById('productModal');
+    const product = featuredProductModalData[productId];
+
+    if (!modalElement || !product) {
+        return;
+    }
+
+    setProductModalDetails(product);
+
+    const modal = new bootstrap.Modal(modalElement);
     modal.show();
 }
 
