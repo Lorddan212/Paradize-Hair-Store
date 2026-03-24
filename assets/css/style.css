@@ -658,6 +658,7 @@ img {
 
 .hero-image {
   position: relative;
+  height: 500px;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 
@@ -671,10 +672,24 @@ img {
   transform: perspective(var(--perspective)) rotateY(-5deg) rotateX(5deg);
 }
 
-.hero-image img {
+.hero-image img,
+.hero-image-slide {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
+}
+
+.hero-image-slide {
+  opacity: 0;
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  transform: scale(1.03);
+}
+
+.hero-image-slide.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .hero-image::before {
@@ -888,20 +903,6 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.card-badge {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: var(--gradient-primary);
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  z-index: 2;
 }
 
 /* ============================================
@@ -1163,6 +1164,16 @@ img {
 
 .about-hero-actions {
   flex-wrap: wrap;
+}
+
+.about-intro-copy .about-intro-text {
+  max-width: none;
+  margin: 0 0 18px;
+}
+
+.about-intro-image {
+  max-width: 500px;
+  margin-left: auto;
 }
 
 .about-intro-text {
@@ -2035,6 +2046,15 @@ textarea.form-control {
   box-shadow: 0 0 20px var(--shadow-color);
 }
 
+.form-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.form-select option[value=""] {
+  color: var(--text-muted);
+}
+
 .form-error {
   color: var(--red);
   font-size: 0.85rem;
@@ -2077,17 +2097,26 @@ textarea.form-control {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 8px 14px;
-  font-size: 1.2rem;
+  gap: 10px;
+  padding: 10px 18px;
+  font-size: 0.92rem;
   letter-spacing: 0.3px;
   text-transform: none;
-  line-height: 1.2;
+  line-height: 1;
   box-shadow: 0 3px 14px rgba(139, 92, 246, 0.25);
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 .delivery-inquiry-btn i {
-  font-size: 0.95rem;
+  font-size: 1.95rem;
+  color: currentColor;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-bottom: 0;
   margin-right: 0 !important;
 }
 
@@ -2271,6 +2300,88 @@ textarea.form-control {
   .contact-form-container {
     padding: 30px;
   }
+
+  .about-intro-copy .about-intro-text {
+    max-width: 900px;
+    margin: 0 auto 18px;
+  }
+
+  .about-intro-image {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-page .btn {
+    padding: 12px 24px;
+    font-size: 0.85rem;
+    letter-spacing: 0.7px;
+  }
+
+  .home-page .btn.btn-lg {
+    padding: 13px 26px;
+    font-size: 0.88rem;
+  }
+
+  .home-page .btn.btn-sm {
+    padding: 9px 16px;
+    font-size: 0.74rem;
+    letter-spacing: 0.55px;
+  }
+
+  .services-page .btn {
+    padding: 12px 24px;
+    font-size: 0.85rem;
+    letter-spacing: 0.7px;
+  }
+
+  .services-page .btn.btn-lg {
+    padding: 13px 26px;
+    font-size: 0.88rem;
+  }
+
+  .products-page .product-card .card-price {
+    font-size: 1.15rem;
+  }
+
+  .products-page .product-card .card-overlay .btn.btn-sm,
+  .products-page .product-card .card-body .btn.btn-whatsapp.btn-sm {
+    padding: 10px 18px;
+    font-size: 0.76rem;
+    letter-spacing: 0.6px;
+  }
+
+  .products-page .product-card .card-body .btn.btn-whatsapp.btn-sm {
+    min-width: 46px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .products-page .cta-buttons .btn {
+    padding: 11px 22px;
+    font-size: 0.82rem;
+    letter-spacing: 0.7px;
+  }
+
+  .gallery-page .cta-buttons .btn {
+    padding: 11px 22px;
+    font-size: 0.82rem;
+    letter-spacing: 0.7px;
+  }
+
+  .contact-page .contact-submit-btn,
+  .contact-page .contact-chat-btn {
+    padding: 11px 22px;
+    font-size: 0.82rem;
+    letter-spacing: 0.7px;
+  }
+
+  .about-page .about-hero-actions .btn,
+  .about-page .cta-buttons .btn {
+    padding: 11px 22px;
+    font-size: 0.82rem;
+    letter-spacing: 0.7px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -2304,7 +2415,7 @@ textarea.form-control {
   .footer-social {
     justify-content: center;
   }
-  
+
   .stats-number {
     font-size: 2.5rem;
   }
@@ -2357,6 +2468,41 @@ textarea.form-control {
   .cta-buttons .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .about-page .cta-buttons .btn {
+    width: auto;
+  }
+
+  .home-page .hero-buttons .btn,
+  .home-page .cta-buttons .btn {
+    width: auto;
+  }
+
+  .services-page .cta-buttons .btn {
+    width: auto;
+  }
+
+  .products-page .cta-buttons .btn {
+    width: auto;
+  }
+
+  .gallery-page .cta-buttons .btn {
+    width: auto;
+  }
+
+  .gallery-page .gallery-filter {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .gallery-page .gallery-filter-btn {
+    width: 100%;
+  }
+
+  .contact-page .contact-submit-btn {
+    width: auto !important;
   }
 
   .product-grid {
@@ -2444,12 +2590,12 @@ textarea.form-control {
 
   .delivery-inquiry-btn {
     gap: 6px;
-    padding: 7px 12px;
-    font-size: .85rem;
+    padding: 15px 20px;
+    font-size: 0.95rem;
   }
 
   .delivery-inquiry-btn i {
-    font-size: 0.85rem;
+    font-size: 1.65rem;
   }
 
   .about-hero-actions {

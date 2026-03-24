@@ -14,7 +14,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="home-page">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -78,8 +78,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6 hero-image-container">
-                    <div class="hero-image">
-                        <img src="assets/img/hero-hair.jpg" alt="Premium Human Hair Wig">
+                    <div class="hero-image" data-hero-image-slider>
+                        <img src="assets/img/Hero%201.jpg" alt="Premium Human Hair Wig" class="hero-image-slide active">
+                        <img src="assets/img/Hero%202.jpg" alt="Luxury Braided Wig Collection" class="hero-image-slide">
                     </div>
                 </div>
             </div>
@@ -98,9 +99,9 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4 reveal stagger-1">
                     <div class="card-3d product-card">
-                        <span class="card-badge">Best Seller</span>
-                        <div class="card-image">
-                            <img src="assets/img/product-1.jpg" alt="Silky Straight Bundle">
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img loading="lazy" decoding="async" src="assets/img/Silky_Straight_Bundle_1.jpg" alt="Silky Straight Bundle" class="product-image-slide active">
+                            <img loading="lazy" decoding="async" src="assets/img/Silky_Straight_Bundle_2.jpg" alt="Silky Straight Bundle close view" class="product-image-slide">
                             <div class="card-overlay">
                                 <button class="btn btn-primary btn-sm" onclick="openProductModal('straight-bundle')">
                                     <i class="bi bi-eye me-1"></i>Quick View
@@ -122,9 +123,9 @@
                 
                 <div class="col-md-6 col-lg-4 reveal stagger-2">
                     <div class="card-3d product-card">
-                        <span class="card-badge">New</span>
-                        <div class="card-image">
-                            <img src="assets/img/product-2.jpg" alt="Deep Wave Wig">
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img loading="lazy" decoding="async" src="assets/img/Deep_Wave_Wig_1.jpg" alt="Deep Wave Wig" class="product-image-slide active">
+                            <img loading="lazy" decoding="async" src="assets/img/Deep_Wave_Wig_2.jpg" alt="Deep Wave Wig side view" class="product-image-slide">
                             <div class="card-overlay">
                                 <button class="btn btn-primary btn-sm" onclick="openProductModal('deep-wave-wig')">
                                     <i class="bi bi-eye me-1"></i>Quick View
@@ -146,8 +147,9 @@
                 
                 <div class="col-md-6 col-lg-4 reveal stagger-3">
                     <div class="card-3d product-card">
-                        <div class="card-image">
-                            <img src="assets/img/product-3.jpg" alt="Goddess Braids Wig">
+                        <div class="card-image product-image-slider" data-product-slider>
+                            <img loading="lazy" decoding="async" src="assets/img/Goddess_Braids_Wig_1.jpg" alt="Goddess Braids Wig" class="product-image-slide active">
+                            <img loading="lazy" decoding="async" src="assets/img/Goddess_Braids_Wig_2.jpg" alt="Goddess Braids Wig side view" class="product-image-slide">
                             <div class="card-overlay">
                                 <button class="btn btn-primary btn-sm" onclick="openProductModal('goddess-braids')">
                                     <i class="bi bi-eye me-1"></i>Quick View
@@ -320,6 +322,55 @@
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered product-modal-dialog">
+            <div class="modal-content product-modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProductTitle">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="product-detail-image">
+                                <img loading="lazy" decoding="async" id="modalProductImage" src="" alt="Product">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-detail-info">
+                                <h4 id="modalProductName">Product Name</h4>
+                                <p class="card-price" id="modalProductPrice" style="font-size: 1.8rem; margin-bottom: 20px;">₦0</p>
+                                <p id="modalProductDescription">Product description goes here.</p>
+                                <div class="product-price-guide" id="modalPriceGuide" hidden>
+                                    <h5 style="margin-top: 25px; margin-bottom: 15px;">Price Guide</h5>
+                                    <ul class="product-features modal-price-breakdown" id="modalPriceBreakdown"></ul>
+                                </div>
+
+                                <h5 style="margin-top: 25px; margin-bottom: 15px;">Features:</h5>
+                                <ul class="product-features">
+                                    <li><i class="bi bi-check-circle-fill"></i> 100% Premium Quality</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Tangle-Free & Shedding-Free</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Can be Dyed & Styled</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Long-Lasting Durability</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Natural Look & Feel</li>
+                                </ul>
+
+                                <div class="d-flex gap-3 mt-4">
+                                    <button class="btn btn-whatsapp flex-fill" id="modalOrderBtn">
+                                        <i class="bi bi-whatsapp me-2"></i>Order on WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- CTA Strip -->
     <section class="cta-strip">
